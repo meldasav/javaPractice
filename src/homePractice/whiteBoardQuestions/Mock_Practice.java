@@ -106,6 +106,9 @@ public class Mock_Practice {
     public  static String removeUpperCase(String str){
         return str.replaceAll("[A-Z]","");
         }
+    public static String removeLowerCase(String str){
+    return str.replaceAll("[a-z]","");
+        }
 
     }
 
