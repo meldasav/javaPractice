@@ -142,6 +142,7 @@ public class Mock_Practice {
             }
         }
         return s.toString();
+        
     }
     public static String removeSpecials2(String str){
         StringBuilder s = new StringBuilder();
@@ -164,6 +165,13 @@ public class Mock_Practice {
         }
         return s1;
     }
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
         System.out.println(removeVowels("meldaTARIKKEREM"));
