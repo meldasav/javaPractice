@@ -19,5 +19,11 @@ public class Basic_Regex {
         System.out.println(Pattern.matches("[xyz]","x"));
         System.out.println(Pattern.matches("[^xyz]","y"));
         System.out.println(Pattern.matches("[^a-z]","123"));
+        //write phone number (xxx)-xxx-xxxx
+        System.out.println(Pattern.matches(("\\([1-9]{3}\\)-[\\d]{3}-[\\d]{4}"),"(331)-431-1743"));
+        System.out.println(Pattern.matches("\\([1-9][0-9]{2}\\)-[1-9][0-9]{2}-[\\d]{4}", "(708)-456-7890"));//number with start 708
+
+
+
     }
 }

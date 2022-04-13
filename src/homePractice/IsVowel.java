@@ -18,5 +18,15 @@ public class IsVowel {
 
 
         }
+    public static String removeVowel(String str){
+        String s="AEOUIaeiou";
+        StringBuilder s1= new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            if(!str.contains(s)){
+                s1.append(str.charAt(i));
+            }
+        }
+        return s1.toString();
+    }
     }
 
