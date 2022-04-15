@@ -12,9 +12,9 @@ public class FibonacciNum {
         i=4   2    3    5
          */
         int n1=0,n2=1,n3=0;
-        String str="";
+        StringBuilder str= new StringBuilder();
         for(int i=0;i<9;i++){
-            str+=n1+" - ";
+            str.append(n1).append(" - ");
             n3=n1+n2;
             n1=n2;
             n2=n3;

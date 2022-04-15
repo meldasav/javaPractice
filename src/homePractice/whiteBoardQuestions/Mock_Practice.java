@@ -2,8 +2,6 @@ package homePractice.whiteBoardQuestions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 
 public class Mock_Practice {
 
@@ -142,41 +140,165 @@ public class Mock_Practice {
             }
         }
         return s.toString();
-        
+
     }
-    public static String removeSpecials2(String str){
+
+    public static String removeSpecials2(String str) {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            char c =str.charAt(i);
-           if(c>=65 && c<=90 || c>=97 && c<=122){
-               s.append(c);
-           }
-    }
+            char c = str.charAt(i);
+            if (c >= 65 && c <= 90 || c >= 97 && c <= 122) {
+                s.append(c);
+            }
+        }
         return s.toString();
 
     }
-    public static String removeVowel(String str){
-        String s="AEOUIaeiou";
-        String s1="";
+
+    public static String removeVowel(String str) {
+        String s = "AEOUIaeiou";
+        StringBuilder s1 = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            if(!str.contains(s)){
-                s1+=(str.charAt(i));
+            if (!str.contains(s)) {
+                s1.append(str.charAt(i));
             }
         }
-        return s1;
+        return s1.toString();
     }
 
+    //   Write a method that takes a String and return String back with all uppercase letters removed
+    public static String _11_Remove_Uppercase_Letters_From_String(String str) {
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (!Character.isUpperCase(c)) {
+                s.append(str.charAt(i));
+            }
+        }
+        return s.toString();
+    }
 
+    public static String noUpperCase(String str) {
+        return str.replaceAll("[A-Z]", "");
+    }
 
+    /*
+    Write a method that takes a positive int argument and prints all the numbers from 1 to given number
+    However, it prints “Fizz” for the numbers divided by 3, “Buzz” for the numbers divided by 5,
+    and “FizzBuzz” for the numbers divided by both 3 and 5
+    */
+    public static void printNumbersOneToGivenFizzBuzz(int a) {
+        for (int i = 0; i <= a; i++) {
+            if (i % 15 == 0) System.out.println("FizzBuzz");
+            else if (i % 5 == 0) System.out.println("Buzz");
+            else if (i % 3 == 0) System.out.println("Fizz");
+            else System.out.println(i);
+        }
 
+    }
 
+    public static int sum(int[] num) {
+        int sum = 0;
+        for (int number : num) {
+            sum += number;
+        }
+        return sum;
+    }
 
+    public static int product(int[] product) {
+        int pro = 1;
+        for (int number : product) {
+            pro *= number;
+        }
+        return pro;
+    }
+
+    public static int average(int[] average) {
+        int sum = 0;
+        for (int number : average) {
+            sum += number;
+        }
+        return sum / average.length;
+    }
+
+    //is prime number
+    public static int prime(int[] numbers) {
+        int countPrime = 0;
+        for (int number : numbers) {
+            if (number == 2 || number == 3) countPrime++;
+            else if (number > 3) {
+                boolean isPrime = true;
+                for (int i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) countPrime++;
+            }
+        }
+        return countPrime;
+
+    }
+
+    public static int countOddNumbers(int[] numbers) {
+        int count = 0;
+        for (int number : numbers) {
+            if (number % 2 == 1) count++;
+        }
+        return count;
+    }
+   /*Create containers
+        create loop
+        print out series
+              n1   n2   n3
+        i =0  0    1    1
+        i =1  1    1    2
+        i=3   1    2    3
+        i=4   2    3    5
+         */
+
+public static void _Fibonacci_Series_Of_Given_Number(int number){
+    int n1=0,n2=1,n3=2;
+    StringBuilder s= new StringBuilder();
+    for (int i = 0; i < number; i++) {
+        s.append(n1).append("-");
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+
+    }
+    System.out.print(s.substring(0,s.length()-1));
+}
+ //   Write a method that takes a String argument and returns the count of spaces as an int
+
+    public static int _34_Count_Spaces_In_A_String(String str){
+    int countSpace=0;
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i)==' ')countSpace++;
+        }
+        return countSpace;
+    }
+    public static int countSpaces(String str){
+        int count = 0;
+        for(char c : str.toCharArray()){
+            if(Character.isSpaceChar(c)) count++;
+        }
+        return count;
+    }
+    public static int countWords(String str){
+    int countWords=1;
+        for (int i = 0; i < str.length()-1; i++) {
+        if(str.charAt(i) == ' ' && str.charAt(i + 1) != ' ')countWords++;
+        }
+        return countWords;
+    }
 
 
     public static void main(String[] args) {
-        System.out.println(removeVowels("meldaTARIKKEREM"));
+     //   _Fibonacci_Series_Of_Given_Number(13);
+        System.out.println(countWords("Java is fun to learn"));
     }
-
 }
 
 
