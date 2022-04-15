@@ -3,6 +3,9 @@ package homePractice.whiteBoardQuestions;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static java.lang.Integer.MAX_VALUE;
+import static java.lang.Integer.MIN_VALUE;
+
 public class Mock_Practice {
 
     /*
@@ -258,41 +261,44 @@ public class Mock_Practice {
         i=4   2    3    5
          */
 
-public static void _Fibonacci_Series_Of_Given_Number(int number){
-    int n1=0,n2=1,n3=2;
-    StringBuilder s= new StringBuilder();
-    for (int i = 0; i < number; i++) {
-        s.append(n1).append("-");
-        n3=n1+n2;
-        n1=n2;
-        n2=n3;
+    public static void _Fibonacci_Series_Of_Given_Number(int number) {
+        int n1 = 0, n2 = 1, n3 = 2;
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < number; i++) {
+            s.append(n1).append("-");
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
 
+        }
+        System.out.print(s.substring(0, s.length() - 1));
     }
-    System.out.print(s.substring(0,s.length()-1));
-}
- //   Write a method that takes a String argument and returns the count of spaces as an int
+    //   Write a method that takes a String argument and returns the count of spaces as an int
 
-    public static int _34_Count_Spaces_In_A_String(String str){
-    int countSpace=0;
+    public static int _34_Count_Spaces_In_A_String(String str) {
+        int countSpace = 0;
         for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i)==' ')countSpace++;
+            if (str.charAt(i) == ' ') countSpace++;
         }
         return countSpace;
     }
-    public static int countSpaces(String str){
+
+    public static int countSpaces(String str) {
         int count = 0;
-        for(char c : str.toCharArray()){
-            if(Character.isSpaceChar(c)) count++;
+        for (char c : str.toCharArray()) {
+            if (Character.isSpaceChar(c)) count++;
         }
         return count;
     }
-    public static int countWords(String str){
-    int countWords=1;
-        for (int i = 0; i < str.length()-1; i++) {
-        if(str.charAt(i) == ' ' && str.charAt(i + 1) != ' ')countWords++;
+
+    public static int countWords(String str) {
+        int countWords = 1;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == ' ' && str.charAt(i + 1) != ' ') countWords++;
         }
         return countWords;
     }
+
     public static String removeSpace1(String str) {
         String[] str1 = str.split(" ");
         StringBuilder sb = new StringBuilder();
@@ -302,9 +308,71 @@ public static void _Fibonacci_Series_Of_Given_Number(int number){
         return sb.substring(0, sb.length() - 1);
     }
 
+    /*
+    if number 0 or 1 return 1 else create temp variable asigned to number create fori loop starting from 2 until temp asigned number* to i return number
+     */
+    public static int numbersFactorial(int number) {
+        if (number == 0 || number == 1) return 1;
+        else {
+            int temp = number;
+            for (int i = 2; i < temp; i++) {
+                number *= i;
+            }
+        }
+        return number;
+    }
+    //create loop start from 0 goes until number.length()
+     /*
+       if number[i]==0 or 1 assign number[i]=1
+       else
+       create int variable called number asigned to numbers[i]
+       create second loop start at 2 goes until number
+       asigned number[i]*=j;
+       return numbers
+      */
+
+    public static int[] factorial1(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == 0 || numbers[i] == 1) numbers[i] = 1;
+            else {
+                int number = numbers[i];
+                for (int j = 2; j < number; j++) {
+                    numbers[i] *= j;
+                }
+            }
+        }
+        return numbers;
+    }
+    //find the max number in array
+    /*
+    put max number in min value
+    create a loop in arry length
+    if array bigger than max asign meax to be array[i]
+    return max
+     */
+
+    public static int maxValue(int[] array) {
+        int max = MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) max = array[i];
+        }
+        return max;
+    }
+
+    public static int minValue(int[] array) {
+        int min = MAX_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) min = array[i];
+        }
+        return min;
+    }
+
     public static void main(String[] args) {
-     //   _Fibonacci_Series_Of_Given_Number(13);
-        System.out.println(countWords("Java is fun to learn"));
+        //   _Fibonacci_Series_Of_Given_Number(13);
+        //   System.out.println(numbersFactorial(5));
+        System.out.println(Arrays.toString(factorial1(new int[]{0, 5, 4, 1, 3, 2})));
+        System.out.println(minValue((new int[]{-5, 4, 1, 10, 2})));
+
     }
 }
 
