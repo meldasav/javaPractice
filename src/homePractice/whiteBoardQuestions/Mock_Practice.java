@@ -293,7 +293,14 @@ public static void _Fibonacci_Series_Of_Given_Number(int number){
         }
         return countWords;
     }
-
+    public static String removeSpace1(String str) {
+        String[] str1 = str.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (String s : str1) {
+            if (!s.isEmpty()) sb.append(s).append(" ");
+        }
+        return sb.substring(0, sb.length() - 1);
+    }
 
     public static void main(String[] args) {
      //   _Fibonacci_Series_Of_Given_Number(13);
