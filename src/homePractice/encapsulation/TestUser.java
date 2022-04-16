@@ -14,7 +14,9 @@ public class TestUser {
         john.createPost("great day today");
         john.info();
         User.seeTimeline(john);
-
+        User adam=User.createProfile();
+        adam.info();
+        User.seeAllUser();
         }
 
     }
