@@ -158,16 +158,7 @@ public class Mock_Practice {
 
     }
 
-    public static String removeVowel(String str) {
-        String s = "AEOUIaeiou";
-        StringBuilder s1 = new StringBuilder();
-        for (int i = 0; i < str.length(); i++) {
-            if (!str.contains(s)) {
-                s1.append(str.charAt(i));
-            }
-        }
-        return s1.toString();
-    }
+
 
     //   Write a method that takes a String and return String back with all uppercase letters removed
     public static String _11_Remove_Uppercase_Letters_From_String(String str) {

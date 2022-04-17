@@ -2,7 +2,7 @@ package homePractice;
 
 public class IsVowel {
     public static void main(String[] args) {
-
+        System.out.println(removeVowel("melda"));
             char c='a';
             String s="AEOUIaeiou";
             boolean iscVowel=false;

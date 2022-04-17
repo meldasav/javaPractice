@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class ConvertingArrayListToArray {
     public static void main(String[] args) {
-        //Object[] array = arrayList.toArray();
+        //
         List<String> names=new LinkedList<>();
         names.add("Melda");
         names.add("Kerem");
