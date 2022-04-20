@@ -458,14 +458,61 @@ public class PracticeFinalMockInterview {
 //}
 
     public static String removeExtraSpace(String str) {
-        String[] str1=str.trim().split(" ");
-        String s="";
+        String[] str1 = str.trim().split(" ");
+        String s = "";
         for (String s1 : str1) {
-            if(!s1.isEmpty())s+=s1+" ";
+            if (!s1.isEmpty()) s += s1 + " ";
         }
-        return s.substring(0,s.length()-1);
+        return s.substring(0, s.length() - 1);
 
     }
 
+    //Practice Loremlpsum
 
+    /**
+     * The lorem ipsum is a placeholder text used in publishing and graphic design.
+     * This filler text is a short paragraph that contains all the letters of
+     * the alphabet. The characters are spread out evenly so that the reader's
+     * attention is focused on the layout of the text instead of its content.
+     */
+    //check if 2.nd sentence contains "text"
+    public static boolean doesContain(String str) {
+        String[] split = str.split("\\.");
+        String indexAfterSplit = split[1];
+        return indexAfterSplit.contains("filler");
+
+    }
+
+    /**
+     * IS ANAGRAM
+     */
+    public static boolean isAnagram1(String str1, String str2) {
+        char[] arr1 = str1.toCharArray();
+        char[] arr2 = str2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void fibonacci1(int number) {
+        int n1 = 0, n2 = 1, n3 = 0;
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < number; i++) {
+            str.append(n1).append("-");
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+        }
+        System.out.println(str.substring(0, str.length() - 1));
+    }
+
+    public static void main(String[] args) {
+        fibonacci1(5);
+    }
 }
+
