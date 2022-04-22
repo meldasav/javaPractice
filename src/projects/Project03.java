@@ -49,7 +49,7 @@ public class Project03 {
         System.out.println("Greatest number is = " + maxNumber + "\n");
 
         // TASK 4
-        char myCharacter = 'K';
+        char myCharacter = 'a';
         // int myChar = myCharacter;
         if (myCharacter >= 65 && myCharacter <= 90) {
             System.out.println("The letter is uppercase");
@@ -61,19 +61,14 @@ public class Project03 {
 
 
         //TASK 5
-        char t5_myChar = 'm';
-        int task5MyChar = t5_myChar;
+        char c = 'm';
 
-        if ((t5_myChar >= 65 && t5_myChar <= 90) || (t5_myChar >= 97 && t5_myChar <= 122)) {
-            //letter
-            if (task5MyChar == 'a' || task5MyChar == 'e' || task5MyChar == 'I' || task5MyChar == 'o' || task5MyChar == 'u' || task5MyChar == 'A' || task5MyChar == 'E' || task5MyChar == 'I' || task5MyChar == 'O' || task5MyChar == 'U') {
+        if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) {
+            if (c == 'a' || c == 'e' || c == 'I' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
                 System.out.println("the letter is vowel");
-            } else {
-                System.out.println("the letter is consonant");
-            }
-        } else {
-            System.out.println("Invalid character detected!!");
-        }
+            else System.out.println("the letter is consonant");
+        } else System.out.println("Invalid character detected!!");
+
         //TASK 6
         char givenCharacter = '9';
         if (!(givenCharacter >= 65 && givenCharacter <= 90) && !(givenCharacter >= 97 && givenCharacter <= 122) && !(givenCharacter >= 48 && givenCharacter <= 57)) {
@@ -81,25 +76,13 @@ public class Project03 {
         }
         if ((givenCharacter >= 65 && givenCharacter <= 90) || (givenCharacter >= 97 && givenCharacter <= 122) || (givenCharacter >= 48 && givenCharacter <= 57)) {
             System.out.println("Invalid character detected!!!");
-        } else {
-            System.out.println("Special character is = " + givenCharacter);
-        }
-
-
+        } else System.out.println("Special character is = " + givenCharacter);
         // TASK 7
-        char givenCharacter1 = 't';
-
-        if ((givenCharacter1 >= 65 && givenCharacter1 <= 90) && (givenCharacter1 >= 97 && givenCharacter1 <= 122)) {
+        char givenCharacter1 = '$';
+        if ((givenCharacter1 >= 65 && givenCharacter1 <= 90) || (givenCharacter1 >= 97 && givenCharacter1 <= 122))
             System.out.println("Character is a letter");
-
-            if (givenCharacter1 >= 48 && givenCharacter1 <= 57) {
-                System.out.println("Character is a digit");
-
-            } else {
-                System.out.println("Character is a special character");
-
-            }
-
-        }
+        if (givenCharacter1 >= 48 && givenCharacter1 <= 57) System.out.println("Character is a digit");
+        else System.out.println("Character is a special character");
     }
 }
+

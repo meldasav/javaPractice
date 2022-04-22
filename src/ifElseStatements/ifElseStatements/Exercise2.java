@@ -14,15 +14,14 @@ public class Exercise2 {
         } else {
             System.out.println("You are not old enough for driving");
         }
-            if (weight > 150.0) {
-                System.out.println("You are heavier than 150 pounds");
-            } else if(weight==150.0) {
-                System.out.println("you are 150 pounds");
-            }else{
-                System.out.println("You are lighter than 150 pounds");
-            }
-
+        if (weight > 150.0) {
+            System.out.println("You are heavier than 150 pounds");
+        } else if (weight == 150.0) {
+            System.out.println("you are 150 pounds");
+        } else {
+            System.out.println("You are lighter than 150 pounds");
+        }
 
 
     }
-    }
+}

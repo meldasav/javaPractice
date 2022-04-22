@@ -10,15 +10,11 @@ public class Homework08 {
 
         // TASK 1
 
-//        int randomNumber1 = (int) (Math.random() * 51);
-//        System.out.println(randomNumber1);
-//
-//        if (randomNumber1 >= 10 && randomNumber1 <= 25) {
-//            System.out.println("true");
-//
-//        } else {
-//            System.out.println("false");
-//        }
+        int randomNumber1 = (int) (Math.random() * 51);
+        System.out.println(randomNumber1);
+
+        if (randomNumber1 >= 10 && randomNumber1 <= 25) System.out.println("true");
+        else System.out.println("false");
 
         // TASK 2
 
@@ -54,17 +50,6 @@ public class Homework08 {
                 System.out.println("is in the 4st quarter");
         }
 
-        //a marka süt
-        String urun="sut";
-        String renk ="beyaz";
-        String kaynak="Inek, koyun, keçi";
-        int sonkullanma=7;
-
-        if(urun.equals("sut")&&renk.equals("beyaz")&&sonkullanma==7 && (kaynak.contains("Inek")||kaynak.contains("Koyun") || kaynak.contains("Keci"))){
-
-        }
-
-
 
 //        int randomNumber2 = (int) (Math.random() * 100) + 1;
 //        System.out.println(randomNumber2);
@@ -89,31 +74,17 @@ public class Homework08 {
 
         // TASK 3
 
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("Please enter 5 numbers between 1 to 10");
-//        int number1 = scan.nextInt(), number2 = scan.nextInt(), number3 = scan.nextInt(), number4 = scan.nextInt(), number5 = scan.nextInt();
-//        int points=0;
-//
-//        if(number1>=1 && number1<=10) {
-//            points += number1 * 5;
-//        }
-//            if (number2 >= 1 && number2 <= 10) {
-//                points += number2 * 4;
-//            }
-//                if (number3 >= 1 && number3 <= 10) {
-//                    points += number3 * 3;
-//                }
-//                    if (number4 >= 1 && number4 <= 10) {
-//                        points += number4 * 2;
-//                    }
-//                        if (number5 >= 1 && number5 <= 10) {
-//                            points += number5;
-//
-//
-//
-//                        }
-//        System.out.println(points);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter 5 numbers between 1 to 10");
+        int number1 = scan.nextInt(), number2 = scan.nextInt(), number3 = scan.nextInt(), number4 = scan.nextInt(), number5 = scan.nextInt();
+        int points = 0;
 
+        if (number1 >= 1 && number1 <= 10) points += number1 * 5;
+        if (number2 >= 1 && number2 <= 10) points += number2 * 4;
+        if (number3 >= 1 && number3 <= 10) points += number3 * 3;
+        if (number4 >= 1 && number4 <= 10) points += number4 * 2;
+        if (number5 >= 1 && number5 <= 10) points += number5;
+        System.out.println(points);
 
     }
 

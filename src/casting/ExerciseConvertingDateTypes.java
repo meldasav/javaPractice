@@ -33,7 +33,12 @@ public class ExerciseConvertingDateTypes {
         //String.valueOf()--->String str =String.valueOf(x+y);
         //String str = String.valueOf(x)+String.valueOf(y);
 
-
+        //converting string to primitives
+        String price="$33.99";
+        String withOutDolor=price.substring(1);
+        String withOutDolor1=price.replace("$","");
+        Double myDouble=Double.parseDouble(withOutDolor);
+        System.out.println(myDouble);
 
     }
 }

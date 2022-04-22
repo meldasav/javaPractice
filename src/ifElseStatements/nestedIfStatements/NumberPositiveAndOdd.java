@@ -5,13 +5,23 @@ public class NumberPositiveAndOdd {
         int random = (int) (Math.random() * 101) - 50;
         System.out.println(random);
 
-
-        if(random%2==1) {     //random%2!=0 number is odd
-            System.out.println("Number is positive and odd");
-        }else{
-            System.out.println("number is positive and even");
+        if (random > 0) {
+            System.out.println("Number is positive");
+            if (random % 2 == 0) {//positive and even
+                System.out.println("number is positive and even");
+            } else {
+                System.out.println("number is positive and odd");
+            }
+        } else if (random < 0) {
+            System.out.println("Number is negative");
+            if (random % 2 == 0) {
+                System.out.println("Negative and even");
+            } else {
+                System.out.println("Negative and odd");
+            }
+        } else {
+            System.out.println("Number is zero");
         }
 
     }
-
 }

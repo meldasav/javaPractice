@@ -436,26 +436,25 @@ public class PracticeFinalMockInterview {
 
     }
 
-//    public static void removeDupFinal(int [] numbers) {
-//
-//        int lent = numbers.length;
-//
-//        for (int i = 0; i < lent - 1; i++) {
-//            for (int j = i + 1; j < lent; j++) {
-//                if (numbers[i] == numbers[j]) {
-//                    numbers[j] = numbers[lent - 1];
-//                    lent--;
-//                }
-//            }
-//        }
-//
-//    }
-//    public static void main(String[] args) {
-//
-//       removeDupFinal(new int[]{5,5,12,9,9,2,1});
-//
-//    }
-//}
+    public static void removeDupFinal(int [] numbers) {
+
+        int lent = numbers.length;
+
+        for (int i = 0; i < lent - 1; i++) {
+            for (int j = i + 1; j < lent; j++) {
+                if (numbers[i] == numbers[j]) {
+                    numbers[j] = numbers[lent - 1];
+                    lent--;
+                }
+            }
+        }
+
+    }
+    public static void main(String[] args) {
+
+       removeDupFinal(new int[]{5,5,12,9,9,2,1});
+
+    }
 
     public static String removeExtraSpace(String str) {
         String[] str1 = str.trim().split(" ");
@@ -511,8 +510,10 @@ public class PracticeFinalMockInterview {
         System.out.println(str.substring(0, str.length() - 1));
     }
 
-    public static void main(String[] args) {
-        fibonacci1(5);
-    }
+
+
+
+
+
 }
 
