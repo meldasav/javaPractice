@@ -24,6 +24,17 @@ public class TernaryPractice {
          */
         int random = (int) (Math.random() * 51);
         System.out.println((random >= 10 && random <= 25) ? "number is between 10 and 25" : "number is not between 10 and 25");
+        System.out.println(".............NEW TASK.............");
+        /**
+         * ASK USER ENTER NAME IF NAME STARTS WITH A or a you are in the club otherwise you are not in yhe club
+         */
+        System.out.println("What is your name?");
+        String str = scan.nextLine();
+        if (str.toLowerCase().startsWith("a")) System.out.println("you are in the club ");
+        else System.out.println("you are not in the club");
+
+        //way 2
+        System.out.println(str.toLowerCase().startsWith("a")? "you are in the club" : "you are not in the club");
     }
 
     /**
@@ -34,7 +45,7 @@ public class TernaryPractice {
     }
 
     public static String getMiddleCharacter(String str) {
-    return (str.length() % 2 == 0) ? "" + str.charAt(str.length() / 2 + 1) + str.charAt(str.length() / 2) : "" + str.charAt(str.length() / 2);
+        return (str.length() % 2 == 0) ? "" + str.charAt(str.length() / 2 + 1) + str.charAt(str.length() / 2) : "" + str.charAt(str.length() / 2);
     }
 }
 
