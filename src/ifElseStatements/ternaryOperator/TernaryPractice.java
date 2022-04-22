@@ -35,6 +35,11 @@ public class TernaryPractice {
 
         //way 2
         System.out.println(str.toLowerCase().startsWith("a")? "you are in the club" : "you are not in the club");
+
+        //ask user enter their address if it is from chicago print you are in the  club
+        System.out.println("please enter your address");
+        String address= scan.nextLine();
+        System.out.println(address.toLowerCase().contains("chicago")? "you are in the club " : "you are not in the club");
     }
 
     /**
