@@ -1,5 +1,7 @@
 package utilities;
 
+import homeworks.Homework09;
+
 import java.util.Scanner;
 
 public class ScannerHelper {
@@ -36,4 +38,17 @@ public class ScannerHelper {
     }
 
 
+    public static String getNameFromUser() {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("please enter your name");
+        String name =scan.nextLine();
+        return name;
+    }
+
+    public static String getColorFromUser() {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("please enter your color");
+        String color =scan.nextLine();
+        return color;
+    }
 }
