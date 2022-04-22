@@ -22,9 +22,10 @@ public class TernaryPractice {
         /**
          * generate a random number between 0-50 if number between 10 and 25 return true otherwise print false
          */
-         int random=(int)(Math.random()*51);
-        System.out.println((random>=10 && random<=25)? "number is between 10 and 25": "number is not between 10 and 25");
+        int random = (int) (Math.random() * 51);
+        System.out.println((random >= 10 && random <= 25) ? "number is between 10 and 25" : "number is not between 10 and 25");
     }
+
     /**
      * CREATE METHOD FIND ABSOLUTE DIFFERENCE OF 2 INT NUMBERS AND RETURN USE TERNARY
      */
@@ -32,7 +33,10 @@ public class TernaryPractice {
         return (a > b) ? a - b : b - a;
     }
 
+    public static String getMiddleCharacter(String str) {
+    return (str.length() % 2 == 0) ? "" + str.charAt(str.length() / 2 + 1) + str.charAt(str.length() / 2) : "" + str.charAt(str.length() / 2);
     }
+}
 
 
 
