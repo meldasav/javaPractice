@@ -6,6 +6,11 @@ public class _06_Additional_Interview_Question {
     public static void main(String[] args) {
         //Find the greatest and print it
         int[] numbers = {5, 3, 0, -5};
+        /**
+         * first way sort method
+         */
+        Arrays.sort(numbers);
+        System.out.println(numbers[numbers.length-1]);
 
         int max = numbers[0];
         for (int number : numbers) {
@@ -34,7 +39,8 @@ public class _06_Additional_Interview_Question {
         double minValue3 = Double.MAX_VALUE;
 
         for (double number : array) {
-            if (number == minValue) continue;
+            if (number == minValue) {
+            }
             else if (number < minValue3) minValue3 = number;
 
 

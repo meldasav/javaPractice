@@ -29,7 +29,7 @@ public class _04_Practice_Partial_Array {
         int product=1;
         for (int i = numbers.length-4; i <numbers.length; i++) {
             int number=numbers[i];
-           if(number!=0) product*=number;
+            if(number!=0) product*=number;
 
             }
         System.out.println(product);
