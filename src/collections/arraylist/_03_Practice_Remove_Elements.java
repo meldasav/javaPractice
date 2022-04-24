@@ -19,8 +19,11 @@ public class _03_Practice_Remove_Elements {
 
         [Java, JavaScript, C#, C++]
          */
+        languages.remove("python");
+        System.out.println(languages);
+
         List<String> element=new LinkedList<>();
-       languages.removeIf(x->x.startsWith("J"));
+        languages.removeIf(x->x.startsWith("J"));
         System.out.println(languages);
 
         languages.removeIf(x->x.toLowerCase().startsWith("p"));
