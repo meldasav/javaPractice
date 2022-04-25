@@ -10,7 +10,7 @@ public class TreeSetPractice {
         numbers.add(1);
         numbers.add(2);
         numbers.add(5);
-      //  numbers.add(null);//you can not have null/ nullPointerException
+      //   numbers.add(null);//you can not have null/ nullPointerException
         System.out.println(numbers);// numbers sorted
 
         TreeSet<String> names=new TreeSet<>();

@@ -1,7 +1,8 @@
 package homePractice.whiteBoardQuestions;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Integer.MIN_VALUE;
@@ -358,6 +359,17 @@ public class Mock_Practice {
         return min;
     }
 
+    public static Integer[] removeDup(int[] array){
+        LinkedHashSet<Integer> set =new LinkedHashSet<>();
+        for (int i = 0; i < array.length; i++) {
+            set.add(array[i]);
+        }
+        return set.toArray(new Integer[0]);
+    }
+
+
+
+//return new HashSet<>(Arrays.asList(strings)).toArray(new String[0]);
     public static void main(String[] args) {
         //   _Fibonacci_Series_Of_Given_Number(13);
         //   System.out.println(numbersFactorial(5));
