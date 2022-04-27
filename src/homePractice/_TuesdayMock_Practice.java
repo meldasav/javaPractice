@@ -131,7 +131,7 @@ public class _TuesdayMock_Practice {
     }
 
     public static String removeConsonants1(String str) {
-        return str.replaceAll("[^AEOUIaeoui\\d\\W]", "");
+        return str.replaceAll("[^AEOUIaeoui\\d\\W_]", "");
     }
 
     public static String removeConsonants2(String str) {
@@ -451,7 +451,23 @@ public class _TuesdayMock_Practice {
         return 0;
     }
 
-
+    public static String removeConsonants4(String str) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c == 'A'
+                    || c == 'E'
+                    || c == 'O'
+                    || c == 'U'
+                    || c == 'I'
+                    || c == 'a'
+                    || c == 'e'
+                    || c == 'i'
+                    || c == 'o'
+                    || c == 'u') sb.append(c);
+        }
+        return sb.toString();
+    }
 
 
     public static void main(String[] args) {
@@ -459,6 +475,7 @@ public class _TuesdayMock_Practice {
         System.out.println(removeDupInString1(new ArrayList(Arrays.asList("foo", "bar", "foo", "123", "bar"))));
         System.out.println(Arrays.toString(maxNumberInTwoArray(new int[]{1, 2, 3, 4, 5}, new int[]{4, 2, 6, 4, 9})));
         System.out.println((secondMax(new int[]{1, 2, 3, 4, 5})));
+        System.out.println(removeConsonants1("melda127"));
     }
 
 }
