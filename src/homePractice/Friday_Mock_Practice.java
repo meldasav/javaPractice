@@ -120,21 +120,23 @@ public class Friday_Mock_Practice {
         }
     public static String removeExtraSpace(String str){
         StringBuilder sb=new StringBuilder();
-        for (String s : str.split(" ")) {
+        for (String s : str.trim().split(" ")) {
             if(!s.isEmpty())sb.append(s).append(" ");
         }
-        return sb.toString().substring(0,sb.length()-1);
+        return sb.substring(0,sb.length()-1);
     }
     public static String removeExtraSpace1(String str){
         return str.trim().replaceAll("\\s+"," ");
     }
-
+    public static String removeConsonants(String str){
+        return str.trim().replaceAll("[a-zA-Z && [^AEOUIaeoui]]","");
+    }
 
 
 
     public static void main(String[] args) {
         System.out.println(maxValue2(new int[]{0, 1, 2, 3, 4, 5}));
-        System.out.println(removeExtraSpace1("       Java is      fun     "));
+        System.out.println(removeConsonants("       Java is      fun     "));
     }
 
 }
