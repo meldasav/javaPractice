@@ -20,6 +20,9 @@ public class _01Practice_Char_Array {
         for (char c : str.toCharArray()) {
             if (c == 'l') count++;
         }
+
+        int max=Integer.MIN_VALUE;
+        System.out.println(max);
     }
 
 }
