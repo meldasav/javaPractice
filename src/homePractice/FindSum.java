@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class FindSum {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(sum(new int[]{1,2,3})));
-        System.out.println(findMax1(new int[]{5,3,4}));
+        System.out.println(findMin1(new int[]{5,3,4}));
 
     }
 
@@ -23,7 +23,7 @@ public class FindSum {
         }
         return max;
     }
-    public static int findMax1(int[] numbers){
+    public static int findMin1(int[] numbers){
         TreeSet<Integer> number=new TreeSet<>();
         for (int i : numbers) number.add(i);
          return number.first();
