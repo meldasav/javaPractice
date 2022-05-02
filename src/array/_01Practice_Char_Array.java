@@ -23,6 +23,8 @@ public class _01Practice_Char_Array {
 
         int max=Integer.MIN_VALUE;
         System.out.println(max);
+
+
     }
 
 }

@@ -98,7 +98,8 @@ public class Mock3Solution {
     }
 
     public static int findMin2(ArrayList<Integer> numbers) {
-        TreeSet<Integer> number = new TreeSet<>(numbers);
+        TreeSet<Integer> number = new TreeSet<>();
+        for (Integer integer : numbers) number.add(integer);
         return number.first();
     }
 
