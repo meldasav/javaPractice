@@ -15,6 +15,8 @@ public class Ap_1 {
         System.out.println(wordsWithoutList(new String[]{"a", "bb", "b", "ccc"}, 1));
         System.out.println(scoresAverage((new int[]{2, 2, 4, 4})));
         System.out.println(sumHeight(new int[]{5, 3, 6, 7, 2}, 2, 4));
+        System.out.println(Arrays.toString(wordsWithout(new String[]{"a", "b", "c", "d"}, "a")));
+        System.out.println(Arrays.toString(new int[]{sumHeights2(new int[]{5, 3, 6, 7, 2}, 2, 4)}));
     }
 
     public int wordsCount(String[] words, int len) {
@@ -160,6 +162,47 @@ public class Ap_1 {
         return false;
     }
 
+    public static String[] wordsWithout(String[] words, String target) {
+        List<String> list = new ArrayList<>();
+        for (String s : words) {
+            if (!s.equals(target)) list.add(s);
+        }
+        String[] arr = new String[list.size()];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = list.get(i);
+        }
+        return arr;
+    }
 
+    public static int sumHeights2(int[] heights, int start, int end) {
+        int sum = 0;
+        for (int i = start; i < end; i++) {
+            int change = heights[i + 1] - heights[i];
+            if (change > 0) sum += Math.abs(change) * 2;
+            else sum += Math.abs(change);
+        }
+        return sum;
+    }
+
+    public static String[] mergeTwo(String[] a, String[] b, int n) {
+        int ai = 0;
+        int bi = 0;
+        String[] c = new String[n];
+        for (int i = 0; i < n; i++) {
+            int comp = a[ai].compareTo(b[bi]);
+            if (comp < 0) {
+                c[i] = a[ai];
+                ai++;
+            } else if (comp > 0) {
+                c[i] = b[bi];
+                bi++;
+            } else {
+                c[i] = a[ai];
+                ai++;
+                bi++;
+            }
+        }
+        return c;
+    }
 }
 
