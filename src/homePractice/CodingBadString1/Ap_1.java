@@ -156,7 +156,7 @@ public class Ap_1 {
         if (n <= 10 || (n >= 90 && n <= 100)) {
             return true;
         }
-        
+
         return false;
     }
 
