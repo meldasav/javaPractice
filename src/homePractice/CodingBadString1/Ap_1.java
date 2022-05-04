@@ -1,9 +1,6 @@
 package homePractice.CodingBadString1;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Ap_1 {
     public static void main(String[] args) {
@@ -18,6 +15,8 @@ public class Ap_1 {
         System.out.println(Arrays.toString(wordsWithout(new String[]{"a", "b", "c", "d"}, "a")));
         System.out.println(Arrays.toString(new int[]{sumHeights2(new int[]{5, 3, 6, 7, 2}, 2, 4)}));
         System.out.println(dividesSelf(21));
+        System.out.println((matchUp(new String[]{"aa", "bb", "cc"}, new String[]{"aaa", "xx", "bb"})));
+        System.out.println(bigHeights(new int[]{5, 3, 6, 7, 2}, 2, 4));
     }
 
     public int wordsCount(String[] words, int len) {
@@ -223,5 +222,47 @@ public class Ap_1 {
         return true;
 
     }
-}
+
+    public static int matchUp(String[] a, String[] b) {
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].length() != 0 && b[i].length() != 0) {
+                if (a[i].charAt(0) == b[i].charAt(0)) {
+                    count++;
+                }
+            }
+
+        }
+        return count;
+    }
+    public int scoresSpecial(int[] a, int[] b) {
+        return maxScore(a) + maxScore(b);
+    }
+
+    public int maxScore(int[] arr){
+        int max = 0;
+        for(int i: arr){
+            if(i % 10 == 0 && i > max) max = i;
+        }
+        return max;
+    }
+    public static int bigHeights(int[] heights ,int start ,int end){
+        int count=0;
+        for(int i=start;i<end;i++){
+            if(Math.abs(heights[i]-heights[i+1])>=5)count++;
+        }
+        return count;
+    }
+    public int commonTwo(String[] a, String[] b) {
+        String[] shortOne = a.length <= b.length ? a : b;
+        String[] longOne = a.length > b.length ? a : b;
+
+        int count = 0;
+        for(String s: new HashSet<>(Arrays.asList(shortOne))){
+            if(Arrays.binarySearch(longOne, s) >= 0) count++;
+        }
+        return count;
+    }
+    }
+
 
