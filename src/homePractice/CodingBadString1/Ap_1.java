@@ -17,6 +17,7 @@ public class Ap_1 {
         System.out.println(sumHeight(new int[]{5, 3, 6, 7, 2}, 2, 4));
         System.out.println(Arrays.toString(wordsWithout(new String[]{"a", "b", "c", "d"}, "a")));
         System.out.println(Arrays.toString(new int[]{sumHeights2(new int[]{5, 3, 6, 7, 2}, 2, 4)}));
+        System.out.println(dividesSelf(21));
     }
 
     public int wordsCount(String[] words, int len) {
@@ -203,6 +204,24 @@ public class Ap_1 {
             }
         }
         return c;
+    }
+
+    public static String[] wordsFront(String[] words, int n) {
+        String[] array = new String[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = words[i];
+        }
+        return array;
+    }
+
+    public static boolean dividesSelf(int n) {
+        int ncopy = n;
+        while (n > 0) {
+            if (n % 10 == 0 || ncopy % (n % 10) != 0) return false;
+            n /= 10;
+        }
+        return true;
+
     }
 }
 
