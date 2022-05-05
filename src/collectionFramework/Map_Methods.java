@@ -13,6 +13,10 @@ public class Map_Methods {
         favorites.put("City", "Chicago");
         favorites.put("Car", "Lexus");
         favorites.put("Pet", "Turtle");
+        Map<String ,String> map=new HashMap<>(favorites);
+        map.get("Day");
+        System.out.println(map.get("Day"));
+
 
         //Keys:Day ,Color,City,Pet
         //Values:Friday,Black,Chicago,Lexus,Turtle
@@ -41,6 +45,7 @@ public class Map_Methods {
         System.out.println(favorites.containsKey("Sport"));//false
         System.out.println(favorites.containsValue("Tesla"));//true
         System.out.println(favorites.containsValue("Ice-Cream"));//false
+
 
 
     }
