@@ -13,7 +13,7 @@ public class FibonacciNum {
          */
         int n1=0,n2=1,n3=0;
         StringBuilder str= new StringBuilder();
-        for(int i=0;i<9;i++){
+        for(int i=0;i<7;i++){
             str.append(n1).append(" - ");
             n3=n1+n2;
             n1=n2;
