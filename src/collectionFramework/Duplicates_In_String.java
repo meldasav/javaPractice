@@ -1,6 +1,7 @@
 package collectionFramework;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -30,7 +31,15 @@ public class Duplicates_In_String {
                 System.out.println(word + ":" + wordCount.get(word) + " times repeated");
             }
         }
-
-
+        String str = "chicago is nice";
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+        for (Character c : str.toCharArray()) {
+            if (!map.containsKey(c)) map.put(c, 1);
+            else {
+                int count = map.get(c);
+                map.put(c, count += 1);
+            }
+        }
+        System.out.println(map);
     }
 }
