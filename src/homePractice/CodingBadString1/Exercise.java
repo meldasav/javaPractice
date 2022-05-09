@@ -72,5 +72,16 @@ public class Exercise {
             String str1=str.substring(str.length()-2);
             return str1+str1+str1;
         }
+    public String withoutString(String base, String remove) {
+        if(base.length() < remove.length()) return base;
+        String s = "";
+        for(int i = 0; i < base.length(); i++){
+            if(i <= base.length()-remove.length() && base.substring(i, i + remove.length()).equalsIgnoreCase(remove)){
+                i += remove.length()-1;
+            }
+            else s += base.charAt(i);
+        }
+        return s;
+    }
     }
 
