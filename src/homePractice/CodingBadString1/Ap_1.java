@@ -17,6 +17,7 @@ public class Ap_1 {
         System.out.println(dividesSelf(21));
         System.out.println((matchUp(new String[]{"aa", "bb", "cc"}, new String[]{"aaa", "xx", "bb"})));
         System.out.println(bigHeights(new int[]{5, 3, 6, 7, 2}, 2, 4));
+        System.out.println(Arrays.toString(mergeTwo1(new String[]{"a", "c", "z"},new String[]{"a", "b", "c", "z"},3)));
     }
 
     public int wordsCount(String[] words, int len) {
@@ -235,34 +236,52 @@ public class Ap_1 {
         }
         return count;
     }
+
     public int scoresSpecial(int[] a, int[] b) {
         return maxScore(a) + maxScore(b);
     }
 
-    public int maxScore(int[] arr){
+    public int maxScore(int[] arr) {
         int max = 0;
-        for(int i: arr){
-            if(i % 10 == 0 && i > max) max = i;
+        for (int i : arr) {
+            if (i % 10 == 0 && i > max) max = i;
         }
         return max;
     }
-    public static int bigHeights(int[] heights ,int start ,int end){
-        int count=0;
-        for(int i=start;i<end;i++){
-            if(Math.abs(heights[i]-heights[i+1])>=5)count++;
+
+    public static int bigHeights(int[] heights, int start, int end) {
+        int count = 0;
+        for (int i = start; i < end; i++) {
+            if (Math.abs(heights[i] - heights[i + 1]) >= 5) count++;
         }
         return count;
     }
+
     public int commonTwo(String[] a, String[] b) {
         String[] shortOne = a.length <= b.length ? a : b;
         String[] longOne = a.length > b.length ? a : b;
 
         int count = 0;
-        for(String s: new HashSet<>(Arrays.asList(shortOne))){
-            if(Arrays.binarySearch(longOne, s) >= 0) count++;
+        for (String s : new HashSet<>(Arrays.asList(shortOne))) {
+            if (Arrays.binarySearch(longOne, s) >= 0) count++;
         }
         return count;
     }
+
+    public static String[] mergeTwo1(String[] a, String[] b, int n) {
+        TreeSet<String> ab = new TreeSet<>(Arrays.asList(a));
+        ab.addAll(Arrays.asList(b));
+        return Arrays.copyOf(ab.toArray(new String[0]), n);
     }
+    public int commonTwo1(String[] a, String[] b) {
+        HashSet<String> a1 = new HashSet<>();
+        for (String value : a) {
+            for (String s : b) {
+                if (Objects.equals(value, s)) a1.add(value);
+            }
+        }
+        return a1.size();
+    }
+}
 
 
