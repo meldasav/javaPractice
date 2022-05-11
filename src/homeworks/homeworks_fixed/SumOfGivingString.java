@@ -15,6 +15,7 @@ public class SumOfGivingString {
         System.out.println(averageOfEdges(-2, -2, 10));
         System.out.println(Arrays.toString(noA(new String[]{"appium", "123", "ABC", "java"})));
         System.out.println(Arrays.toString(no3or5(new int[]{3, 4, 5, 6})));
+        System.out.println(sumOfDigit2("Melda1983"));
     }
 
     public static int sumOfDigit1(String str) {
@@ -122,6 +123,15 @@ public class SumOfGivingString {
         if (currentAge < 16) System.out.println("Age " + currentAge + " is not allowed");
         else if (currentAge > 16) System.out.println("Age " + currentAge + " is allowed");
         else System.out.println("Age " + currentAge + "is not valid");
+    }
+    public static void checkAge1(int yearOfBirth){
+        Date currentDate = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy"); // sdf is String here
+        int age = Integer.parseInt(sdf.format(currentDate)) - yearOfBirth; // casting String to int
+
+        if (age > 100 || age < 0) System.out.println("AGE IS NOT VALID");
+        else if (age < 16 && age > 0) System.out.println("AGE IS NOT ALLOWED");
+        else System.out.println("AGE IS ALLOWED"); // else (age > 16)
     }
 
     public static int averageOfEdges(int a, int b, int c) {
