@@ -17,7 +17,7 @@ public class CodingBatArray3 {
         for (int i = 0; i < numS.length; i++) {
             for (int j = 0; j < numS.length; j++) {
                 if (numS[i] == numS[j]) {
-                    int temp = i - j + 1;
+                    int temp;
                     temp = numS[i];
                     if (temp > ans) {
                         ans = temp;
