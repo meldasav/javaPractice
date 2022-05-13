@@ -10,6 +10,7 @@ public class ReverseNumberInArray {
         System.out.println(Arrays.toString(maxEnd3SecondWay(new int[]{1, 2, 3})));
         System.out.println(Arrays.toString(makeLast(new int[]{4, 5, 6})));
         System.out.println(Arrays.toString(new int[]{start1(new int[]{1, 2, 3}, new int[]{1, 2, 3})}));
+        System.out.println(stringE("hello"));
     }
 
     public static int[] reverse(int[] array) {
@@ -53,8 +54,27 @@ public class ReverseNumberInArray {
     public static int start1(int[] a, int[] b) {
         int count = 0;
         if (a.length > 0 && a[0] == 1) count++;
-        if (b.length > 0 && b[0] == 1)count++;
+        if (b.length > 0 && b[0] == 1) count++;
         return count;
+    }
+
+    public static int[] plusTwo(int[] a, int[] b) {
+        int[] array = new int[a.length + b.length];
+        for (int i = 0; i < a.length; i++) {
+            array[i] = a[i];
+        }
+        for (int i = 0; i < b.length; i++) {
+            array[i + a.length] = b[i];
+        }
+        return array;
+    }
+
+    public static boolean stringE(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e') count++;
+        }
+        return count >= 1 && count <= 3;
     }
 }
 
