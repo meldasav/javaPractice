@@ -54,4 +54,19 @@ public class Day1 {
         }
         return null;
     }
-}
+
+    /**
+     * remove element
+     */
+    public int removeElement(int[] numS, int val) {
+        int index = 0;
+        for (int i = 0; i < numS.length; i++) {
+            if (numS[i] != val) {
+                numS[index] = numS[i];
+                index++;
+            }
+        }
+        return index;
+    }
+
+    }
