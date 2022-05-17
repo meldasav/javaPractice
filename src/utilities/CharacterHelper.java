@@ -45,11 +45,7 @@ public class CharacterHelper {
     //TASK 4//
     public static boolean isLowercase(char lowercase) {
         String finalLowerCase=(lowercase >= 97 && lowercase <= 122)?"lower":"upper";
-        if (lowercase >= 97 && lowercase <= 122) {
-            return true;
-        } else {
-            return false;
-        }
+        return lowercase >= 97 && lowercase <= 122;
     }
 
     //TASK 5//
