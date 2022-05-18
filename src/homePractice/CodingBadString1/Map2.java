@@ -9,6 +9,8 @@ public class Map2 {
         System.out.println(wordLen(new String[]{"a", "bb", "a", "bb"}));
         System.out.println(pairs(new String[]{"code", "bug"}));
         System.out.println(wordCount(new String[]{"a", "b", "a", "b"}));
+        System.out.println(firstChar(new String[]{"salt", "tea", "soda", "toast"}));
+        System.out.println(wordCount(new String[]{"a", "b", "a", "c","b"}));
     }
 
     //word0(["a","b","a","b]) replace value with 0  -->["a",0,"a",0]
@@ -50,4 +52,25 @@ public class Map2 {
         return map;
     }
 
+    public static Map<String, String> firstChar(String[] string) {
+        Map<String, String> map = new HashMap<>();
+        for (String s : string) {
+            String first = s.substring(0, 1);
+            map.putIfAbsent(first, "");
+            map.put(first, map.get(first) + s);
+        }
+        return map;
+    }
+
+    public static Map<String, Boolean> wordMultiple(String[] str) {
+        Map<String, Boolean> map = new HashMap<>();
+        for (String s : str) {
+            if (map.containsKey(s)) {
+                map.put(s, true);
+            } else {
+                map.put(s, false);
+            }
+        }
+        return map;
+    }
 }
