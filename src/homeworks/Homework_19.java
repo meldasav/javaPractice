@@ -194,17 +194,19 @@ public class Homework_19 {
      */
     public static String[] categorizeCharacters(String str) {
         String[] arr = new String[3];
-            for (int i = 0; i < str.length(); i++) {
-                char c = str.charAt(i);
-                if (Character.isLetter(c)) {
-                    arr[0] = String.valueOf(c);
-                } else if (Character.isDigit(c)) {
-                    arr[1] = String.valueOf(c);
-                } else {
-                    arr[2] = String.valueOf(c);
-                }
-            }
-        return arr;
+        String letter = "";
+        String digit = "";
+        String special = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isLetter(c)) letter += c;
+            else if (Character.isDigit(c)) digit += c;
+            else special += c;
+            arr[0] = letter;
+            arr[1] = digit;
+            arr[2] = special;
         }
+        return arr;
     }
+}
 
