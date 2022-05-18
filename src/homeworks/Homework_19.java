@@ -41,7 +41,7 @@ public class Homework_19 {
         System.out.println(Arrays.toString(arrFactorial(new int[]{0, 2, 4, 1})));
         System.out.println(Arrays.toString(arrFactorial(new int[]{5, 0, 6})));
         System.out.println("*******TASK8*******");
-        System.out.println(Arrays.toString(categorizeCharacters("abc123$#%")));
+        System.out.println(Arrays.toString(categorizeCharacters("12ab$%3c%")));
 
     }
 
@@ -197,11 +197,11 @@ public class Homework_19 {
             for (int i = 0; i < str.length(); i++) {
                 char c = str.charAt(i);
                 if (Character.isLetter(c)) {
-                    arr[0] += String.valueOf(c);
+                    arr[0] = String.valueOf(c);
                 } else if (Character.isDigit(c)) {
-                    arr[1] += String.valueOf(c);
+                    arr[1] = String.valueOf(c);
                 } else {
-                    arr[2] += String.valueOf(c);
+                    arr[2] = String.valueOf(c);
                 }
             }
         return arr;
