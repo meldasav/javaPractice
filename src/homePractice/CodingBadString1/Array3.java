@@ -21,7 +21,7 @@ public class Array3 {
        public static int countClumps(int[] num){
         int count=0;
            for (int i = 0; i < num.length; i++) {
-               if(i==0 || num[i]!=num[i-1] && (i!=num.length-1 && num[i]!=num[i+1])){
+               if((i==0 || num[i]!=num[i-1]) && (i!=num.length-1 && num[i]==num[i+1])){
                    count++;
                }
            }
