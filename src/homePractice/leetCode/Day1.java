@@ -7,7 +7,7 @@ import java.util.Map;
 public class Day1 {
     public static void main(String[] args) {
         System.out.println(removeDup(new int[]{1, 1, 2, 2, 4, 5, 6}));//out put is 5 basically return the length
-        System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 9)));
+        System.out.println(Arrays.toString(twoSum1(new int[]{2, 7, 11, 15}, 9)));
     }
 
     /**
