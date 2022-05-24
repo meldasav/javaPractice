@@ -117,18 +117,8 @@ public class Homework20 {
      * All words should be in reverse order. Make sure that there are two words inside the sentence at least.
      * If there is no two words return “There is not enough words!”.
      */
-//    public static String reverseSentence(String sentence) {
-//        if (sentence.indexOf(' ') < 0) return "There are not enough words";
-//        else {
-//            String lastWordFirst = sentence.toUpperCase().substring(sentence.lastIndexOf(' ') + 1, sentence.lastIndexOf(' ') + 2);
-//            String lastWord = sentence.substring(sentence.lastIndexOf(' ') + 2);
-//            String firstWord = sentence.substring(0, sentence.indexOf(' '));
-//            String middle = sentence.substring(sentence.indexOf(' ') + 1, sentence.lastIndexOf(' '));
-//            return (lastWordFirst + lastWord + " " + middle + " " + firstWord);
-//
-//        }
     public static String reverseSentence(String sentence) {
-        if (sentence.indexOf(" ") <= 0) return "There is not enough words!";
+        if (sentence.indexOf(' ') < 0) return "There is not enough words!";
         else {
             StringBuilder sb = new StringBuilder();
             String[] words = sentence.split(" ");
