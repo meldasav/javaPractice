@@ -188,8 +188,7 @@ public class Homework20 {
         ArrayList<String> list = new ArrayList<>();
         for (String string : strings) {
             if (!string.equals("x")) {
-                string = string.replaceAll("x", "");
-                string = string.replaceAll("X", "");
+                string = string.toLowerCase().replaceAll("x", "");
                 list.add(string);
             }
         }
