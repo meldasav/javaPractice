@@ -17,7 +17,7 @@ public class Homework20 {
         System.out.println(noZero1(new ArrayList<>(Arrays.asList(0, 1, 10))));//[1,10]
         System.out.println(noZero1(new ArrayList<>(Arrays.asList(0, 0, 0))));//[]
         System.out.println("~~~~~~TASK3~~~~~~");
-        System.out.println(Arrays.deepToString(numberAndSquare(new int[]{1, 2, 3})));
+        System.out.println(Arrays.deepToString(numberAndSquare1(new int[]{1, 2, 3})));
         System.out.println(Arrays.deepToString(numberAndSquare(new int[]{0, 3, 6})));
         System.out.println(Arrays.deepToString(numberAndSquare(new int[]{1, 4})));
         System.out.println("~~~~~~TASK4~~~~~~");
@@ -95,6 +95,17 @@ public class Homework20 {
         }
         return arr;
     }
+
+    //2.way
+    public static int[][] numberAndSquare1(int[] numbers) {
+        int[][] arr = new int[numbers.length][2];
+        for (int i = 0; i < numbers.length; i++) {
+             arr[i]=new int[]{numbers[i],numbers[i]* numbers[i]};
+
+        }
+        return arr;
+    }
+
 
     /**
      * -Create a method called containsValue()
