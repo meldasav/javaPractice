@@ -45,10 +45,10 @@ public class Practice_Collections {
 
         TreeSet<String> names = new TreeSet<>(Arrays.asList("Melda", "Tarik", "Kerem", "Osman", "Volkan", "Hatice", "Meryem"));
         System.out.println(names);
-        System.out.println(names.stream().filter(x -> x.toString().startsWith("M")).count());
-        System.out.println(names.stream().filter(x -> x.toString().toLowerCase().contains("m")).count());
-        System.out.println(names.stream().filter(x -> x.toString().length() > 5).count());
-        System.out.println(names.stream().filter(x -> x.toString().toLowerCase().equals("melda")).count());
+        System.out.println(names.stream().filter(x -> x.startsWith("M")).count());
+        System.out.println(names.stream().filter(x -> x.toLowerCase().contains("m")).count());
+        System.out.println(names.stream().filter(x -> x.length() > 5).count());
+        System.out.println(names.stream().filter(x -> x.equalsIgnoreCase("melda")).count());
 
         /**
          * create Arraylist remove duplicates
@@ -154,7 +154,7 @@ public class Practice_Collections {
             if (!values.containsKey(c)) values.put(c, 1);
             else {
                 int count = values.get(c);
-                values.put(c, count += 1);
+                values.put(c, count + 1);
             }
         }
         for (Map.Entry<Character, Integer> c : values.entrySet()) {
