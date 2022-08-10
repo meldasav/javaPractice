@@ -52,8 +52,8 @@ public class Homework13 {
         }
         System.out.println(hasApple);
         System.out.println("..........TASK5............");
-        int[] arr1 = {1, 2, 3,5,6};
-        int[] arr2 = {2, 4,5,6,1,10};
+        int[] arr1 = {1, 2, 3, 5, 6};
+        int[] arr2 = {2, 4, 5, 6, 1, 10};
         for (int task5 : arr1) {
             for (int i : arr2) {
                 if (task5 == i) {
@@ -64,38 +64,36 @@ public class Homework13 {
 
         System.out.println("..........TASK6............");
 
-        String str = "baNana";
-        //            012345
-        String duplicates = ""; // a
 
-       for(int i=0;i<str.length()-1;i++){
-           for(int j=i+1;j<str.length();j++){
-            if(str.toLowerCase().charAt(i)==str.toLowerCase().charAt(j)&&
-               !duplicates.contains(str.toLowerCase().substring(i,i+1))){
-                duplicates+=str.toLowerCase().charAt(i);
-                System.out.println(str.charAt(i));
-                break;
-            }
+        String word = "automation".toLowerCase();
+        // a t o
 
+        StringBuilder sb =new StringBuilder();
+        char[] array=word.toCharArray();
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i+1; j <array.length ; j++) {
+                if(!sb.toString().contains(array[i] + "") && (array[i] + "").equals(array[j] + "")){
+                    sb.append(array[i]);
+                    System.out.println(array[i]);
                 }
 
             }
+
+        }
+
+
+
+
+
+
+            }
+
         }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-        }
 
 
 
