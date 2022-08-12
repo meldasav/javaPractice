@@ -1,6 +1,6 @@
 package array;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class _06_Additional_Interview_Question {
     public static void main(String[] args) {
@@ -43,7 +43,21 @@ public class _06_Additional_Interview_Question {
             }
             else if (number < minValue3) minValue3 = number;
 
-
         }
+        double[] array1 = {2.5, 9, 10.25, 0.5, 0.5, 1.5, 10.25};
+        double maxValue=Double.MIN_VALUE;
+        double secondMaxValue=Double.MIN_VALUE;
+        for(Double value : array1){
+            if(maxValue<value)maxValue=value;
+        }
+        for (Double value : array1){
+            if(secondMaxValue<value && value!=maxValue)secondMaxValue=value;
+        }
+        System.out.println(secondMaxValue);
+
+        TreeSet<Double> set=new TreeSet<>();
+        for (Double d : array1)set.add(d);
+        ArrayList<Double> list=new ArrayList<>(set);
+        System.out.println(list.get(list.size()-2));
     }
 }
