@@ -1,5 +1,6 @@
 package homePractice.leetCode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,6 +9,7 @@ public class Day1 {
     public static void main(String[] args) {
         System.out.println(removeDup(new int[]{1, 1, 2, 2, 4, 5, 6}));//out put is 5 basically return the length
         System.out.println(Arrays.toString(twoSum1(new int[]{2, 7, 11, 15}, 9)));
+
     }
 
     /**
@@ -69,4 +71,33 @@ public class Day1 {
         return index;
     }
 
+
+    public static String mostCounted(String str) {
+        int vowelA = 0;
+        int vowelE = 0;
+        int vowelI = 0;
+        int vowelO = 0;
+        int vowelU = 0;
+        str = str.toLowerCase();
+
+
+        for (int i = 0; i < str.length(); i++) {
+            char str1 = ' ';
+
+            for (char c : str.toCharArray()){
+
+            }
+            char c = str.charAt(i);
+            if (c == 'a') vowelA++;
+            else if (c == 'e') vowelE++;
+            else if (c == 'i') vowelI++;
+            else if (c == 'o') vowelO++;
+            else if (c == 'u') vowelU++;
+        }
+        int mostCounted = Math.max(vowelA, Math.max(vowelE, Math.max(vowelI, Math.max(vowelO, vowelU))));
+        return "most counted vowel " + mostCounted;
     }
+
+
+
+}

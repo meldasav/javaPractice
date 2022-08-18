@@ -68,14 +68,14 @@ public class Prime_Number {
 
     public static void fibonacci(int number) {
         StringBuilder sb = new StringBuilder();
-        int n1 = 0, n2 = 1, n3 = 0;
+        int n1 = 0, n2 = 1, n3 ;
         for (int i = 0; i < number; i++) {
             sb.append(n1).append("-");
             n3 = n1 + n2;
             n1 = n2;
             n2 = n3;
         }
-        System.out.println(sb.toString().substring(0, sb.length() - 1));
+        System.out.println(sb.substring(0, sb.length() - 1));
     }
 
     public static int countVowels(String str) {

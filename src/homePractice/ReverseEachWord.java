@@ -6,11 +6,14 @@ public class ReverseEachWord {
     public static void main(String[] args) {
         String string = "Java is fun ok";
         String[] arr = string.split(" ");
-        for(int i = 0; i < arr.length; i ++){
-            for (int j = arr[i].length()-1; j >=0; j-- ){
-                System.out.print(arr[i].charAt(j));
+        for (String s : arr) {
+            for (int j = s.length() - 1; j >= 0; j--) {
+                System.out.print(s.charAt(j));
             }
             System.out.print(" ");
         }
+
+
+        }
     }
-}
+
