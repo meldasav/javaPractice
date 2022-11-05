@@ -7,6 +7,8 @@ public class ConvertingStringToPrimitives {
         //23+12=33
         int num1Int=Integer.parseInt(num1);
         int num2Int=Integer.parseInt(num2);
+        double number=Double.parseDouble("23");
+        System.out.println(number);
         System.out.println(num1Int);
         System.out.println(num2Int);
         Integer num1Integer=Integer.valueOf(num1);

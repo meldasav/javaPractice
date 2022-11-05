@@ -19,6 +19,7 @@ public class Homework09 {
         System.out.println("The last 3 characters in the name are = " + name.substring(name.length() - 3));
         System.out.println(name.startsWith("A") || name.startsWith("a") ? "You are in the club!" : "Sorry, you are not in the club");
 
+
         //TASK2//
         String address = ScannerHelper.getAddressFromUser();
         if (address.toUpperCase().contains("CHICAGO")) System.out.println("You are in the club");
