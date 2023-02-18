@@ -78,7 +78,7 @@ public class _03_equals {
                 c = scanner.next();
                 c1 = c.charAt(0);
             }
-            else if(c1 == '.' || c1 == '*') {
+            else if((c1 > 58 && c1 <64) || (c1> 90 && c1<96) || (c1> 33 && c1<47) || (c1> 122 && c1<127)) {
                 System.out.println("Special Character is " + c1);
             }
         } while (Character.isDigit(c1) || Character.isLetter(c1) ||
