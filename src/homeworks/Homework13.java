@@ -20,7 +20,6 @@ public class Homework13 {
         for (int number : numbers) {
             if (number < 0 && !firstNegative) {
                 firstNegative = true;
-
                 System.out.println(number);
             } else if (number > 0 && !firstPositive) {
                 firstPositive = true;

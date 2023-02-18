@@ -75,8 +75,10 @@ public class Mock_Practice {
     public static boolean isPalindrome(String str) {
         return str.equals(new StringBuilder(str).reverse().toString());
     }
-    //write a method takes string argument return sum of the digits in giving string
 
+
+
+    //write a method takes string argument return sum of the digits in giving string
     public static int totalOfDigit(String str) {
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {

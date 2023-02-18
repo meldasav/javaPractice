@@ -1,8 +1,9 @@
 package myFirstDay;
 
 public class MyFirstProgram {
+
     public static void main(String[] args) {
-//        System.out.println("Apple\nOrange");
+//       System.out.println("Apple\nOrange");
 //        System.out.println("\tmelda\n\tSav");
 //        System.out.println("\tmelda\n\tSav");
 //        System.out.println("\\TechGlobal\\");
