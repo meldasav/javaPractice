@@ -42,25 +42,25 @@ public class _03_equals {
         int i = (5 + 2) * 3 ->
          */
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Please enter a word");
-//        String word1 = scanner.next(), word2 = scanner.next();
-//        do {
-//
-//            if (word1.equals(word2)) {
-//                System.out.println("Two words are equal");
-//            } else {
-//                System.out.println("Two words are NOT equal");
-//                System.out.println("Please enter different words");
-//                word1 = scanner.next();
-//                word2 = scanner.next();
-//            }
-//        } while (!word1.equals(word2));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a word");
+        String word1 = scanner.next(), word2 = scanner.next();
+        do {
+
+            if (word1.equals(word2)) {
+                System.out.println("Two words are equal");
+            } else {
+                System.out.println("Two words are NOT equal");
+                System.out.println("Please enter different words");
+                word1 = scanner.next();
+                word2 = scanner.next();
+            }
+        } while (!word1.equals(word2));
 
 
 
 
-      specialCharacter();
+
 
     }
 
