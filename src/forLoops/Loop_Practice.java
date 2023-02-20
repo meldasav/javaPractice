@@ -102,18 +102,12 @@ public class Loop_Practice {
         do {
             System.out.println("Please enter number");
             number1 = scanner.nextInt();
+                sum1 += number1;
+            number1++;
+        }while (sum1<100);
 
-            if(number1 > 100){
-                System.out.println("This number is already more than 100");
-                break;
-            }else {
-                System.out.println("Please enter another number");
-                int number2 = scanner.nextInt(),number3=scanner.nextInt();
-                sum1 += number2+number3;
-                System.out.println("Sum of the entered numbers is at least 100");
-
-            }
-        }while (!(sum1>=100));
+        if(number1 == 1)System.out.println("This number is already more than 100");
+        else  System.out.println("Sum of the entered numbers is at least 100");
 
         System.out.println("------------TASK 9 ------------");
         int n =0 ,n1=1,n2;
