@@ -6,8 +6,8 @@ public class Homework03 {
     public static void main(String[] args) {
 
 
-      //                      TASK 1
-           Scanner simpleNumber=new Scanner(System.in);
+        //                      TASK 1
+        Scanner simpleNumber = new Scanner(System.in);
 
 //        System.out.println("What is the first number?");
 //        int number1=simpleNumber.nextInt();
@@ -34,11 +34,11 @@ public class Homework03 {
 //
 // //                           TASK 3
 //
-        int a=10,b=7,c=5,d=72,e=24,f=9,g=3,h=18,j=6;
-        System.out.println("1." + "\t" + ((b*c)-a));
-        System.out.println("2." + "\t" + ((d+e)%e));
-        System.out.println("3." + "\t" + (a+-(g)*(f/f)));
-        System.out.println("4." + "\t" + (c+((h/g)*g)-(j%g)));
+        int a = 10, b = 7, c = 5, d = 72, e = 24, f = 9, g = 3, h = 18, j = 6;
+        System.out.println("1." + "\t" + ((b * c) - a));
+        System.out.println("2." + "\t" + ((d + e) % e));
+        System.out.println("3." + "\t" + (a + -(g) * (f / f)));
+        System.out.println("4." + "\t" + (c + ((h / g) * g) - (j % g)));
 //
 //        //                TASK 4
 //
@@ -70,12 +70,15 @@ public class Homework03 {
 //
 //        //                     TASK 6
 
-        double averageSalary=90_000.00;
-        int year=3;
-        double salaryThree=(year*averageSalary);
+        double averageSalary = 90_000.00;
+        int year = 3;
+        double salaryThree = (year * averageSalary);
         System.out.println("A Software Engineer in Test can earn " + salaryThree + " in " + "\n" +
                 "3 years.");
 
-        }
-    }
 
+        int min = 10, max = 20;
+        int random = (int) (Math.random() * (max - min) + 1) + min;
+        System.out.println(random);
+    }
+}

@@ -5,40 +5,42 @@ import java.util.Scanner;
 public class Homework02 {
     public static void main(String[] args) {
 
-        Scanner collect=new Scanner(System.in);
+        Scanner collect = new Scanner(System.in);
+
         System.out.println("what is your full name?");
-        String fullName=collect.nextLine();
+        String fullName = collect.nextLine();
 
         System.out.println("how old are you?");
-        int age=collect.nextInt();
+        int age = collect.nextInt();
+        collect.nextLine();
 
         System.out.println("what is your email address?");
-        String email=collect.nextLine();
+        String emailAddress = collect.nextLine();
 
-         String emailAddress=collect.nextLine();
-        collect.nextLine();
         System.out.println("what is your phone number?");
-        String phone=collect.nextLine();
+        String phone = collect.nextLine();
 
         System.out.println("what is your address?");
-        String address=collect.nextLine();
+        String address = collect.nextLine();
 
-        System.out.println("\tUser who joined this program is " +fullName+ ".John’s age is \n"+
-             age+ ".John’s email address is " + emailAddress
-                + ",phone number " + phone + ",an address is " +address );
+        System.out.println("\tUser who joined this program is " + fullName + "." + fullName + "'s age is \n" +
+                age + "." + fullName + "’s email address is " + emailAddress
+                + ",phone number " + phone + ",an address is " + address);
 
         System.out.println("what is your favorite book?");
-        String book=collect.nextLine();
+        String book = collect.nextLine();
 
         System.out.println("what is your favorite color?");
-        String color= collect.nextLine();
+        String color = collect.nextLine();
 
         System.out.println("what is your favorite number?");
-        int number=collect.nextInt();
+        int number = collect.nextInt();
 
-        System.out.println("User’s favorite book is: " + book + "\n"+
+        System.out.println("User’s favorite book is: " + book + "\n" +
                 "User’s favorite color is: " + color + "\n" +
-                "User’s favorite number is: " + number );
+                "User’s favorite number is: " + number);
+
+        collect.close();
 
 //        System.out.println("What is number 1?");
 //        int number1=collect.nextInt();
@@ -70,8 +72,8 @@ public class Homework02 {
 //        System.out.println("The area of the rectangle = " + (area*perimeter));
 //        System.out.println("The area of the rectangle = " + (2*(area+perimeter)));
 
-          double annualSalary=90_000;
-          double nextThreeYears=(3*annualSalary);
+        double annualSalary = 90_000;
+        double nextThreeYears = (3 * annualSalary);
         System.out.println("A Software Engineer in Test can earn " + nextThreeYears + " in \n" +
                 "3 years.");
     }

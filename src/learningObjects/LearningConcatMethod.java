@@ -23,16 +23,26 @@ public class LearningConcatMethod {
 //        String name=hgs.concat(" "+hgs1);
 
 
-         String firstName="MELDA";
-         String lastName="SAV";
+        String firstName = "MELDA";
+        String lastName = "SAV";
+        String repeatName = "";
 
-         String fullName=firstName.concat(" " + lastName);
-         System.out.println(fullName);
+        String fullName = firstName.concat(" " + lastName);
+        System.out.println(fullName);
+
+        for (int i = 0; i < 5; i++) {
+            repeatName = repeatName.concat(" ".concat(firstName));
+        }
+        System.out.println(repeatName);
 
 
+        String name = "Hello\tWorld";
+        System.out.println(name);
+        name="Hello\nWorld\\";
+        System.out.println(name);
     }
 }
-////
+
 
 
 

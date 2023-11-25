@@ -8,6 +8,19 @@ public class SecondMax {
         System.out.println(Arrays.toString(secondMin(new int[]{1, 2,2,-9, 4, 7})));
         System.out.println(Arrays.toString(secondMin1(new int[]{1, 2,2,-9, 4, 7})));
 
+     int[] arrays = {1,2,3,4};
+
+     int max = Integer.MIN_VALUE;
+     int secondMax = Integer.MIN_VALUE;
+
+     for(int num : arrays){
+         if(num > max) max = num;
+     }
+     for(int num : arrays){
+         if(num > secondMax && num != max) secondMax =num;
+     }
+        System.out.println(secondMax);
+
     }
     public static int[] secondMax(int[] number){
         int max=Integer.MIN_VALUE;
