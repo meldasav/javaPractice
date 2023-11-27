@@ -1,5 +1,7 @@
 package casting;
 
+import java.util.Scanner;
+
 public class AutoboxingAndUnboxing {
     public static void main(String[] args) {
         //Autoboxing primitive-->object(wrapper class)
@@ -19,5 +21,9 @@ public class AutoboxingAndUnboxing {
 
        String num1="23";
        int num1Int=Integer.parseInt(num1);
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How old are you?");
+        int age = scan.nextInt();
     }
 }
