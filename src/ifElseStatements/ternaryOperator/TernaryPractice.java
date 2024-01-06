@@ -6,10 +6,31 @@ import java.util.Scanner;
 
 public class TernaryPractice {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        /**
+         * write a program ask user enter a letter if letter is lowercase print uppercase of same letter , else print the letter by itself
+         */
+        System.out.println("Enter a letter");
+        char letter1 = scan.next().charAt(0);
+        //in ascii lowercase letter - uppercase is 32
+        System.out.println(letter1>=97 && letter1<=122 ? (char)(letter1-32) : letter1);
+        /**
+         * write a program ask user enter a letter if letter is lower case print "this is a lower case"
+         */
+        System.out.println("please enter a letter");
+        char letter = scan.next().charAt(0);
+        System.out.println(letter>97 && letter<122 ? "this is lower case" : "this is not lower case");
+
+        /**
+         * write a program ask user enter a number if number divided by 5 print "Sayi 5 in tam kati"
+         */
+        System.out.println("Please enter a number");
+        int number = scan.nextInt();
+        System.out.println(number % 5 == 0 ? "Sayi 5 in tam kati" : "Sayi 5 in tam kati degil");
         /**
          * write a program ask user their balance if their balance lower than 50.00 give a proper message
          */
-        Scanner scan = new Scanner(System.in);
+
         System.out.println("please enter your balance");
         System.out.println((scan.nextDouble() < 50.00) ? "you have enough" : "you don't have enough");
 
@@ -34,12 +55,12 @@ public class TernaryPractice {
         else System.out.println("you are not in the club");
 
         //way 2
-        System.out.println(str.toLowerCase().startsWith("a")? "you are in the club" : "you are not in the club");
+        System.out.println(str.toLowerCase().startsWith("a") ? "you are in the club" : "you are not in the club");
 
         //ask user enter their address if it is from chicago print you are in the  club
         System.out.println("please enter your address");
-        String address= scan.nextLine();
-        System.out.println(address.toLowerCase().contains("chicago")? "you are in the club " : "you are not in the club");
+        String address = scan.nextLine();
+        System.out.println(address.toLowerCase().contains("chicago") ? "you are in the club " : "you are not in the club");
     }
 
     /**

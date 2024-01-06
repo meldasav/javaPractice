@@ -7,13 +7,13 @@ public class FindTheSmallestOf2numbers {
         Scanner scan = new Scanner(System.in);
         /*
         Write a program that asks user to enter 2 numbers
-Find the smallest and print it
+        Find the smallest and print it
 
-EXAMPLE PROGRAM:
-Program: Please enter 2 numbers
-User: 5 7
+        EXAMPLE PROGRAM:
+        Program: Please enter 2 numbers
+        User: 5 7
 
-Program: 5
+        Program: 5
 
 
          */
@@ -21,7 +21,7 @@ Program: 5
         int a = scan.nextInt();
         int b = scan.nextInt();
 
-        if(a < b)System.out.println("The smallest number between " + a + " and " + b + " is : " + a);
+        if (a < b) System.out.println("The smallest number between " + a + " and " + b + " is : " + a);
         else System.out.println("The smallest number between " + a + " and " + b + " is : " + b);
 
         System.out.println("End of the program!");
@@ -30,7 +30,7 @@ Program: 5
         //int ageKaly =19; int ageKaycee=20;
         //String oldest = ageKaly>agakayce?"KALY :KAYCE
 
+        System.out.println(a <= b ? a + " is smallest" : b + " is the smallest");
 
-
-        }
     }
+}
