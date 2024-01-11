@@ -14,6 +14,19 @@ public class Prime_Number {
         fibonacci(8);
         System.out.println(minValue(new int[]{2,5,7,9,34,5,9,2,89,6,1}));
         System.out.println(secondMin1(new int[]{-2,-3, 1, 4, 7, 8,23}));
+
+        /**
+         *
+         Which 3-digit numbers are prime? How many?
+         */
+        int count = 0;
+        for (int i = 100; i <1000 ; i++) {
+            if(IsPrime(i)) {
+                count++;
+                System.out.println("prime number :" + i);
+            }
+        }
+        System.out.println("there are " + count + " prime numbers");
     }
 
 
