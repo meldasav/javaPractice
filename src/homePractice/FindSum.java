@@ -1,12 +1,34 @@
 package homePractice;
 
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.TreeSet;
 
 public class FindSum {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(sum(new int[]{1,2,3})));
         System.out.println(findMin1(new int[]{5,3,4}));
+
+        /**
+         Verilen sayinin rakamlarinin toplamini bulma
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("please enter a number");
+        int number = scanner.nextInt();
+
+        int sayininUzunlugu = (number + " ").length();
+        int birlerBasamagi=0;
+        int rakamlarToplami=0;
+        int girilenSayi = number;
+
+        for (int i = 0; i < sayininUzunlugu; i++) {
+
+            birlerBasamagi = girilenSayi%10;
+            rakamlarToplami += birlerBasamagi;
+            girilenSayi /= 10;
+        }
+
+        System.out.println(rakamlarToplami);
 
     }
 
