@@ -2,7 +2,6 @@ package array;
 
 public class FindBiggestDifference {
     public static void main(String[] args) {
-
         int[] numbers = {1, 5, 8, 20, 7};
         int maxDifference = findMaxDifference(numbers);
         System.out.println("The biggest difference is: " + maxDifference);
